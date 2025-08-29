@@ -22,7 +22,7 @@
 
 1.  **Κάντε clone το repo:**
     ```bash
-    git clone <your-repo-link>
+    git clone https://github.com/jimsym14/nlp-assignment-2025
     cd <repo-folder>
     ```
 2.  **Εγκαταστήστε τις εξαρτήσεις με το Poetry:**

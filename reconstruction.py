@@ -98,14 +98,26 @@ def reconstruct_with_t5(text: str, model, tokenizer, nlp_model) -> str:
         
     return " ".join(reconstructed_sentences)
 
-def reconstruct_custom(sentence: str) -> str:
+def reconstruct_custom(text: str) -> str:
     """
-    Εφαρμόζει μια χειροκίνητη, στοχευμένη διόρθωση σε μια συγκεκριμένη πρόταση.
+    Εφαρμόζει χειροκίνητους, στοχευμένους αυτόματους κανόνες για τη διόρθωση συχνών λαθών.
+    Αυτοί οι κανόνες είναι πιο γενικοί από μια απλή αντικατάσταση πρότασης.
     """
-    original_sentence = 'Thank your message to show our words to the doctor, as his next contract checking, to all of us.'
-    if sentence.strip() == original_sentence.strip():
-        return "Thank you for your message conveying our words to the doctor regarding his next contract check for all of us."
-    return sentence # Επιστρέφει την αρχική αν δεν ταιριάζει
+    print("  -> Ανακατασκευή με Custom Κανόνες...")
+    corrected_text = text
+
+    # Κανόνας 1: Διόρθωση "final discuss" σε "final discussion"
+    # Αυτό διορθώνει ένα κοινό λάθος στον δεύτερο κείμενο.
+    corrected_text = corrected_text.replace("final discuss", "final discussion")
+
+    # Κανόνας 2: Διόρθωση "Thank your message" σε "Thank you for your message"
+    # Αυτό διορθώνει ένα κοινό λάθος στον πρώτο κείμενο.
+    # Χρησιμοποιούμε regex για να είμαστε σίγουροι ότι πιάνουμε την αρχή πρότασης ή μετά από τελεία.
+    import re
+    corrected_text = re.sub(r'(?i)(^|\.\s*)thank your message', r'\1Thank you for your message', corrected_text)
+
+    return corrected_text
+
 
 # --- ΚΥΡΙΟ ΜΕΡΟΣ ΤΟΥ SCRIPT ---
 
@@ -123,28 +135,21 @@ if __name__ == "__main__":
         print("Βεβαιωθείτε ότι έχετε σύνδεση στο internet για την πρώτη εκτέλεση.")
         exit()
 
-    # Λίστα για να αποθηκεύσουμε τα αποτελέσματα
     results_data = []
-
-    # Επεξεργασία των κειμένων
     texts_to_process = {"Κείμενο 1": TEXT_1, "Κείμενο 2": TEXT_2}
 
     for name, text in texts_to_process.items():
         print(f"\nΕπεξεργασία για το '{name}'...")
-        
+
         # Εφαρμογή των αυτόματων μεθόδων
         recon_langtool = reconstruct_with_langtool(text)
         recon_spacy = reconstruct_with_spacy(text, nlp_spacy)
         recon_t5 = reconstruct_with_t5(text, t5_model, t5_tokenizer, nlp_spacy)
-        
-        # Η custom μέθοδος εφαρμόζεται μόνο στο Κείμενο 1
-        recon_custom_result = ""
-        if name == "Κείμενο 1":
-            # Βρίσκουμε τη συγκεκριμένη πρόταση και την αντικαθιστούμε
-            target_sentence = 'Thank your message to show our words to the doctor, as his next contract checking, to all of us.'
-            if target_sentence in text:
-                 recon_custom_result = text.replace(target_sentence, reconstruct_custom(target_sentence))
-        
+
+        # Η custom μέθοδος εφαρμόζεται πλέον σε όλο το κείμενο,
+        # καθώς οι κανόνες είναι γενικοί.
+        recon_custom_result = reconstruct_custom(text)
+
         # Αποθήκευση των αποτελεσμάτων
         results_data.append({
             "Original_Text_Name": name,
@@ -154,6 +159,7 @@ if __name__ == "__main__":
             "Reconstructed_Spacy": recon_spacy,
             "Reconstructed_Custom": recon_custom_result
         })
+
 
     # Δημιουργία και αποθήκευση του DataFrame
     print("\nΔημιουργία DataFrame και αποθήκευση σε CSV...")
