@@ -36,8 +36,6 @@ def calculate_cosine_similarities(df: pd.DataFrame, model: BertModel, tokenizer:
     
     embedding_cache = {}
     
-    # FIX 1 (LOGIC): Ορίζουμε ρητά τις στήλες κειμένου αντί να τις ψάχνουμε με substring.
-    # Αυτό ήταν το κρίσιμο λάθος στην προηγούμενη έκδοση.
     text_columns_to_process = [
         'Original_Text', 
         'Reconstructed_LangTool', 
@@ -105,8 +103,6 @@ if __name__ == "__main__":
     
     id_vars = ['Original_Text_Name']
     
-    # FIX 1 (LOGIC): Ορίζουμε ρητά τις στήλες που θέλουμε να μετασχηματίσουμε (unpivot).
-    # Αυτή είναι η διόρθωση στο κρίσιμο πρόβλημα.
     value_vars = [
         'Original_Text',
         'Reconstructed_LangTool',
@@ -154,7 +150,6 @@ if __name__ == "__main__":
     print("Εκτέλεση t-SNE (μπορεί να αργήσει)...")
     perplexity = min(5, len(X) - 1)
     
-    # FIX 2 (SYNTAX): Αλλαγή του 'n_iter' σε 'max_iter' για συμβατότητα με νεότερες εκδόσεις scikit-learn.
     tsne = TSNE(n_components=2, random_state=42, perplexity=perplexity, max_iter=1000)
     X_tsne = tsne.fit_transform(X)
     df_long['tsne1'] = X_tsne[:, 0]

@@ -6,7 +6,6 @@ import torch
 from tqdm import tqdm
 import warnings
 
-# Αγνοούμε πιθανές προειδοποιήσεις από τις βιβλιοθήκες για πιο καθαρή εκτέλεση
 warnings.filterwarnings("ignore")
 
 # --- ΑΡΧΙΚΑ ΚΕΙΜΕΝΑ ---
@@ -111,7 +110,7 @@ def reconstruct_custom(text: str) -> str:
     corrected_text = corrected_text.replace("final discuss", "final discussion")
 
     # Κανόνας 2: Διόρθωση "Thank your message" σε "Thank you for your message"
-    # Αυτό διορθώνει ένα κοινό λάθος στον πρώτο κείμενο.
+    # Αυτό διορθώνει ένα κοινό λάθος στο πρώτο κείμενο.
     # Χρησιμοποιούμε regex για να είμαστε σίγουροι ότι πιάνουμε την αρχή πρότασης ή μετά από τελεία.
     import re
     corrected_text = re.sub(r'(?i)(^|\.\s*)thank your message', r'\1Thank you for your message', corrected_text)
