@@ -1,0 +1,54 @@
+﻿Original_Text_Name,Original_Text,Reconstructed_LangTool,Reconstructed_T5,Reconstructed_Spacy,Reconstructed_Custom,CosineSim_Reconstructed_LangTool,CosineSim_Reconstructed_T5,CosineSim_Reconstructed_Spacy,CosineSim_Reconstructed_Custom
+Κείμενο 1,"Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in
+our lives. Hope you too, to enjoy it as my deepest wishes.
+
+Thank your message to show our words to the doctor, as his next contract checking, to all of us.
+I got this message to see the approved message. In fact, I have received the message from the
+professor, to show me, this, a couple of days ago. I am very appreciated the full support of the
+professor, for our Springer proceedings publication","Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in
+our lives. Hope you too, to enjoy it as my deepest wishes.
+
+Thank your message to show our words to the doctor, as his next contract checking, to all of us.
+I got this message to see the approved message. In fact, I have received the message from the
+professor, to show me, this, a couple of days ago. I am very appreciated the full support of the
+professor, for our Springer proceedings publication","today is our dragon boat festival to celebrate it with all safe and great in our lives . hope you too, to enjoy it as my deepest wishes. thank you for your message to show our words to the doctor, as his next contract checking . I got this message to see the approved message. professor sent me a message to show me a couple of days ago . john sutter: i have received the message from the professor, to show me this . I am very appreciated the full support of the professor, for our Springer proceedings publication .","Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives. Hope you too, to enjoy it as my deepest wishes. Thank your message to show our words to the doctor, as his next contract checking, to all of us. I got this message to see the approved message. In fact, I have received the message from the professor, to show me, this, a couple of days ago. I am very appreciated the full support of the professor, for our Springer proceedings publication","Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in
+our lives. Hope you too, to enjoy it as my deepest wishes.
+
+Thank you for your message to show our words to the doctor, as his next contract checking, to all of us.
+I got this message to see the approved message. In fact, I have received the message from the
+professor, to show me, this, a couple of days ago. I am very appreciated the full support of the
+professor, for our Springer proceedings publication",0.9999999,0.9810424,0.9999999,0.99908423
+Κείμενο 2,"During our final discuss, I told him about the new submission the one 
+we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or
+maybe editor?
+
+Anyway, I believe the team, although bit delay and less communication at recent days, they really
+tried best for paper and cooperation. We should be grateful, I mean all of us, for the acceptance
+and efforts until the Springer link came finally last week, I think.
+Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before
+he sending again.
+Because I didn't see that part final yet, or maybe I missed, I apologize if so.
+Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future
+targets","During our final discuss, I told him about the new submission the one 
+we were waiting since last autumn, but the updates were confusing as it not included the full feedback from reviewer or
+maybe editor?
+
+Anyway, I believe the team, although a bit delay and less communication at recent days, they really
+tried best for paper and cooperation. We should be grateful, I mean all of us, for the acceptance
+and efforts until the Springer link came finally last week, I think.
+Also, kindly remind me please, if the doctor still plans for the acknowledgments section edit before
+he's sending again.
+Because I didn't see that part final yet, or maybe I missed, I apologize if so.
+Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future
+targets","cnn's john sutter talks about the new submission he was waiting for . the updates were confusing as it not included the full feedback from reviewer or maybe editor . I believe the team, although bit delay and less communication at recent days, they really tried best for paper . we should be grateful, all of us, for the acceptance and efforts . the springer link came finally last week . kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sends again. if you didn't see that part final yet, or maybe I missed, I apologize . let's celebrate the outcome with strong coffee and future targets . let us make sure all are safe and celebrate the outcome with strong coffee .","During our final discuss, I told him about the new submission the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor? Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation. We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link came finally last week, I think. Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sending again. Because I didn't see that part final yet, or maybe I missed, I apologize if so. Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets","During our final discussion, I told him about the new submission the one 
+we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or
+maybe editor?
+
+Anyway, I believe the team, although bit delay and less communication at recent days, they really
+tried best for paper and cooperation. We should be grateful, I mean all of us, for the acceptance
+and efforts until the Springer link came finally last week, I think.
+Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before
+he sending again.
+Because I didn't see that part final yet, or maybe I missed, I apologize if so.
+Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future
+targets",0.9964015,0.96679103,0.9999998,0.9999176
